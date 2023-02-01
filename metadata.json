@@ -1,0 +1,9 @@
+{
+  "$schema": "https://aka.ms/azure-quickstart-templates-metadata-schema#",
+  "type": "QuickStart",
+  "itemDisplayName": "SQL Server VM automated backup restore",
+  "description": "Create a SQL Server Virtual Machine with performance optimized storage settings on PremiumSSD, join computer do domain, custom script to download backup from private storage account and start the restore process",
+  "summary": "Create a SQL Server, join VM do domain and start a custo powershell script",
+  "githubUsername": "d13g0s0uz4",
+  "dateUpdated": "2020-02-06"
+}
