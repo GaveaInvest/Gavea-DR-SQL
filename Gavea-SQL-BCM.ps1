@@ -160,14 +160,14 @@ function initProvider {
 
 function downloadblob {
     log "Starting Function 'downloadblob' to download blob data [SQL backups] to F:\backups" red
-    log "Creating folder D:\backups\" green
-    New-Item -Path "D:\backups\" -ItemType directory | Out-Null
+    log "Creating folder G:\backups\" green
+    New-Item -Path "G:\backups\" -ItemType directory | Out-Null
     log "Setup AzureStorageContext" green
     $ctx = New-AzureStorageContext -StorageAccountName $blobStorageAccountName -StorageAccountKey $blobStorageAccountKey
     $ctxDiff = New-AzureStorageContext -StorageAccountName $blobStorageAccountNameDiff -StorageAccountKey $blobStorageAccountKeyDiff
     $ContainerNameDiff = "diff-backups"
     $ContainerNameFull = "full-backups"
-    $downloadblobDirectory = "D:\backups\"
+    $downloadblobDirectory = "G:\backups\"
     log "Downloading differential backups" green
     Get-AzureStorageBlob -Container $ContainerNameDiff -Context $ctxDiff | Where-Object SnapshotTime -eq $null | Get-AzureStorageBlobContent -Destination $downloadblobDirectory -Context $ctxDiff
     log "Downloading full backups" green
