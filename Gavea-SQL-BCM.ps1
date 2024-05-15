@@ -14,9 +14,9 @@
    -UName "Domain\user"
    -PWord "P@ssw0rd!"
    -artifactsLocation "https://raw.githubusercontent.com/GaveaInvest/Gavea-DR-SQL/master"
-   -blobStorageAccountName "stgbcmsql"
+   -blobStorageAccountName "accname"
    -blobStorageAccountKey "key"
-   -blobStorageAccountNameDiff "stgbcmsqldiff"
+   -blobStorageAccountNameDiff "accnamediff"
    -blobStorageAccountKeyDiff "keydiff"
 .OUTPUTS
    NONE
@@ -37,9 +37,9 @@ Param (
     [string]$UName,
     [string]$PWord,
     [string]$artifactsLocation = "https://raw.githubusercontent.com/GaveaInvest/Gavea-DR-SQL/master",
-    [string]$blobStorageAccountName = "stgbcmsql",
+    [string]$blobStorageAccountName = "accname",
     [string]$blobStorageAccountKey,
-    [string]$blobStorageAccountNameDiff = "stgbcmsqldiff",
+    [string]$blobStorageAccountNameDiff = "accnamediff",
     [string]$blobStorageAccountKeyDiff
 )
 
